@@ -1,0 +1,19 @@
+git config --global user.name "MaramTaha"
+ git config --global user.email "marammtaha@gmail.com"
+git clone https://github.com/MaramTaha/OSC-training.git /home/osc/MaramTaha
+cd OSC-training
+ mkdir task-2
+cd task-2 
+ touch greeting.txt
+echo "hello world" >> greeting.txt
+git add task-2 
+ git commit -m"Added greating"
+git branch intro
+ git checkout intro
+cd task-2
+ echo "I love git" >> greeting.txt
+git add task-2
+ git commit -m"Added I love git"
+git checkout main
+ git merge intro
+git tag -a v1
