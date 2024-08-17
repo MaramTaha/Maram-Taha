@@ -17,3 +17,5 @@ git add task-2
 git checkout main
  git merge intro
 git tag -a v1
+git remote add origin https://github.com/MaramTaha/OSC-training.git
+ git push -u origin main
