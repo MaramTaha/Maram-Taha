@@ -1,0 +1,15 @@
+mkdir maram
+touch one.txt two.txt three.txt four.txt
+mkdir BAD
+touch bad.txt
+mv one.txt /home/osc/Downloads
+cd ~
+cd Downloads/
+cp one.txt copy.txt
+cd ~
+cd maram/
+nano two.txt 
+echo "1-hello osc 2-hello osc 3-hello osc 4-hello osc 5-hello osc 6-HELLO OSC 7-hello osc 8-hello osc" >> three.txt
+mv three.txt hello.txt
+rm four.txt
+rm -r BAD
