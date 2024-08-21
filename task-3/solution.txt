@@ -14,21 +14,20 @@ cd /home/osc/project_files/reports
  cd /home/osc/project_files/data
  nano data.csv
 cd ..
- tar -cf  logs_backup.tar logs
-mv logs_backup.tar project_files
-cd logs
- tar -xvf logs_backup.tar
+ tar -cvf  logs_backup.tar log/system.log log/error.log log/file1.pdf log/file2.pdf
+mv logs_backup.tar ~/project_files
+tar -xvf logs_backup.tar ~/project_files/logs
 find ~ -name "*.md"
 find /home/osc/project_files -name "*.log"
 find /home/osc/project_files -name file1.pdf
 find /home/osc/project_files -iname "*.pdf"
 find . -type f
-ln -s /home/osc/project_files/data/data.csv link_data.csv
-echo "RAMO" >link_data.csv
+ln -s /home/osc/project_files/data/data.csv /home/osc/project_files/link_data.csv
+nano home/osc/project_files/link_data.csv
 cat data.csv
 RAMO (the output)
 unlink link_data.csv
-touch summary.txt
+touch /home/osc/project_files/summary.txt
  echo "summary start" >summary.txt
 echo "21-8-2024 at 4 PM" >> summary.txt
 wc -l summary.txt | tee -a summary.txt
