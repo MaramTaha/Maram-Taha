@@ -1,0 +1,48 @@
+mkdir project_files
+cd project_files
+ mkdir reports logs data
+cd reports
+ touch report1.md report2.md
+cd /home/osc/project_files/logs
+ touch system.log error.log file1.pdf file2.pdf
+cd /home/osc/project_files/data
+ touch data.csv info.txt
+cd /home/osc/project_files/reports
+ nano report1.md
+ cd /home/osc/project_files/logs
+ nano system.log
+ cd /home/osc/project_files/data
+ nano data.csv
+cd ..
+ tar -cf  logs_backup.tar logs
+mv logs_backup.tar project_files
+cd logs
+ tar -xvf logs_backup.tar
+find ~ -name "*.md"
+find /home/osc/project_files -name "*.log"
+find /home/osc/project_files -name file1.pdf
+find /home/osc/project_files -iname "*.pdf"
+find . -type f
+ln -s /home/osc/project_files/data/data.csv link_data.csv
+echo "RAMO" >link_data.csv
+cat data.csv
+RAMO (the output)
+unlink link_data.csv
+touch summary.txt
+ echo "summary start" >summary.txt
+echo "21-8-2024 at 4 PM" >> summary.txt
+wc -l summary.txt | tee -a summary.txt
+cd reports
+wc -w report1.md 
+cd ..
+cd logs
+wc -c system.log | tee -a /home/osc/project_files/summary.txt
+ls | wc -l | tee -a summary.txt
+cat summary.txt
+the content of summary.txt 
+summary start
+21-8-2024 at 4 PM
+2 summary.txt
+11 system.log
+7
+
