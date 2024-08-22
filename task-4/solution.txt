@@ -1,0 +1,5 @@
+sudo useradd newuser
+sudo groupadd newgroup
+sudo usermod newgroup newuser
+sudo groups newuser
+sudo chown newuser:newgroup sample.txt && sudo delgroup newgroup && sudo deluser --remove-home newuser && sudo apt-get update && sudo apt-get install -y lolcat && echo "I Love OSC" | lolcat && sudo apt-get remove --purge -y lolcat
